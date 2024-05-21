@@ -12,7 +12,7 @@ def undoomed_dice():
     Die_b = Die_a.copy()
 
     for new_dice_a in itertools.combinations_with_replacement(range(1, 5), 6):
-        for new_dice_b in itertools.combinations_with_replacement(range(1, 13), 6):
+        for new_dice_b in itertools.combinations_with_replacement(range(1, 9), 6):
             if max(new_dice_a) <= 4 and sum(new_dice_b) > 21:
                 original_probabilities = calculate_probabilities(Die_a, Die_b)
                 new_probabilities = calculate_probabilities(new_dice_a, new_dice_b)
